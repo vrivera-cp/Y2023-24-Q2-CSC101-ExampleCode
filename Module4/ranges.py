@@ -14,12 +14,12 @@ for i in range(2, 6, 2):
 
 treasure = ['p', 'y', 't', 'h', 'o', 'n']
 
+# Iteration on indices of treasure. Output: 'python'
 for i in range(len(treasure)):
     print(treasure[i], end='')
 print()
-# Output: 'python'
 
+# Iteration on elements of treasure. Output: 'python'
 for letter in treasure:
     print(letter, end='')
 print()
-# Output: 'python'
