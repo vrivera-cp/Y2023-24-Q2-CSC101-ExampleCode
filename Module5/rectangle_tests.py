@@ -15,20 +15,27 @@ class RectangleTests(unittest.TestCase):
 
         rectangle = Rectangle(top_left, bottom_right)
 
-        self.assertEqual(0, get_width(rectangle))  # Incomplete
+        self.assertEqual(6, get_width(rectangle))  # Incomplete
 
     def test_get_height(self):
-        pass  # Incomplete
+        self.assertEqual(9, get_height(Rectangle(Point(1, 10), Point(10, 1))))
+
 
     def test_get_area(self):
-        pass  # Incomplete
+        top_left = Point(0, 2)
+        bottom_right = Point(2, 0)
+
+        rectangle = Rectangle(top_left, bottom_right)
+
+        self.assertEqual(1, get_area(rectangle))
 
     def test_largest(self):
         rectangles = []
 
-        # Append to rectangle instances to the list here
+        rectangles.append(Rectangle(Point(0, 1), Point(1, 0)))
+        rectangles.append(Rectangle(Point(0, 2), Point(2, 0)))
 
-        self.assertEqual(0, get_largest_rectangle(rectangles))  # Incomplete
+        self.assertEqual(Rectangle(Point(0, 2), Point(2, 0)), get_largest_rectangle(rectangles))  # Incomplete
 
 
 if __name__ == '__main__':

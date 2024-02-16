@@ -20,8 +20,14 @@ def get_area(rectangle: Rectangle) -> float:
 def get_largest_rectangle(rectangles: list[Rectangle]) -> Rectangle | None:
     """Return the largest, properly axis-aligned, rectangle."""
     largest_rectangle = None
+    largest_area = None
 
     for rectangle in rectangles:
-        pass  # Unimplemented
+        if largest_rectangle == None:
+            largest_rectangle = rectangle
+            largest_area = get_area(rectangle)
+        elif get_area(rectangle) > largest_area:
+            largest_rectangle = rectangle
+            largest_area = get_area(rectangle)
 
     return largest_rectangle

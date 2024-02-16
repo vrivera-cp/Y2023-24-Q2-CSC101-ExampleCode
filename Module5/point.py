@@ -16,12 +16,13 @@ class Point:
 
 
 if __name__ == '__main__':
-    p = Point(3, 4)
+    p = Point(10, 12)
 
     print(p.x)  # Output: 3
     print(p.y)  # Output: 4
 
     print(p)  # Output: (3, 4)
+    print("my point is: " + str(p))
     print(f"The point is {p}")  # Output: The point is (3, 4)
 
     a = Point(3, 4)
@@ -31,4 +32,4 @@ if __name__ == '__main__':
     print(a == a)  # Output: True
     print(a == b)  # Output: False
     print(a == c)  # Output: True
-    print(a == (3, 4))  # Output: False
+    print(a == Point(3, 4))  # Output: False
