@@ -1,14 +1,13 @@
 """file_writing.py"""
 
-import random
+from random import random
 
 if __name__ == '__main__':
-
-    numbers = 100
-    x = [random.random() * 25 for i in range(numbers)]
-    y = [random.random() * 25 for i in range(numbers)]
+    n = 10
+    x = [random() for i in range(n)]
+    y = [random() for i in range(n)]
 
     with open('numbers.txt', 'w') as f:
-        for i in range(numbers):
+        for i in range(n):
             z = x[i] + y[i]
             f.write(f'{z:.2f}\n')
